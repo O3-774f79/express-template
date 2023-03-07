@@ -8,7 +8,7 @@ module.exports = async (app) => {
   // require('../configs/databases')
 
   // CORS
-  const allowedOrigins = []
+  const allowedOrigins = ['http://localhost', 'https://www.srtforex.com']
   const corsOptions = {
     origin: function (origin, callback) {
       if (!origin) return callback(null, true)
@@ -19,8 +19,8 @@ module.exports = async (app) => {
       return callback(null, true)
     },
   }
-  app.use(cors(corsOptions))
-
+  // app.use(cors(corsOptions))
+  app.use(cors("*"))
   // Parser Body
   app.use(express.json())
   app.use(express.urlencoded({ extended: false }))
