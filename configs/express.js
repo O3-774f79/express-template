@@ -1,7 +1,7 @@
 const express = require('express'),
   morgan = require('morgan'),
   cors = require('cors')
-;(passport = require('passport')), (path = require('path'))
+// ;(passport = require('passport')), (path = require('path'))
 
 module.exports = async (app) => {
   // Connect MongoDB
@@ -29,10 +29,10 @@ module.exports = async (app) => {
   app.use(morgan('dev'))
 
   // Passport
-  require('../configs/passport')
+  // require('../configs/passport')
 
   // Static file
-  app.use('/static', express.static(path.join(__dirname, '../public')))
+  // app.use('/static', express.static(path.join(__dirname, '../public')))
 
   // Custom Response Format
   app.use(require('../configs/responseFormat'))

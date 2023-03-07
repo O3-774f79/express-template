@@ -1,7 +1,7 @@
 const router = require('express').Router()
-const auth = require('../auth')
+// const auth = require('../auth')
 
 router.use('/users', require('./user'))
-router.use('/posts', auth.required, require('./post'))
+router.use('/posts',require('./post'))
 router.get('/test', (req,res)=>res.json({"mesage":"success"}))
 module.exports = router
