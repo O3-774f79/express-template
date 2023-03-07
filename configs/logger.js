@@ -26,14 +26,14 @@ const logger = createLogger({
         format.printf((info) => `${info.timestamp} ${info.level} [${info.label}]: ${info.message}`)
       ),
     }),
-    new transports.File({
-      filename,
-      maxsize: 5242880,
-      maxFiles: 5,
-      format: format.combine(
-        format.printf((info) => `${info.timestamp} [${info.label}] ${info.level}: ${JSON.stringify(info.message)}`)
-      ),
-    }),
+    // new transports.File({
+    //   filename,
+    //   maxsize: 5242880,
+    //   maxFiles: 5,
+    //   format: format.combine(
+    //     format.printf((info) => `${info.timestamp} [${info.label}] ${info.level}: ${JSON.stringify(info.message)}`)
+    //   ),
+    // }),
   ],
 })
 
