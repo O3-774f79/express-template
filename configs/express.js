@@ -5,7 +5,7 @@ const express = require('express'),
 
 module.exports = async (app) => {
   // Connect MongoDB
-  require('../configs/databases')
+  // require('../configs/databases')
 
   // CORS
   const allowedOrigins = []
