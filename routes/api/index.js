@@ -3,5 +3,5 @@ const auth = require('../auth')
 
 router.use('/users', require('./user'))
 router.use('/posts', auth.required, require('./post'))
-
+router.get('/test', (req,res)=>res.json({"mesage":"success"}))
 module.exports = router

@@ -3,7 +3,7 @@ const controllers = require('../../controllers/user.controller')
 const auth = require('../auth')
 const validator = require('../../validators')
 
-router.get('/', auth.required, controllers.onGetAll)
+router.get('/',controllers.onGetAll)
 router.get('/:id', auth.required, controllers.onGetById)
 router.post('/', auth.required, controllers.onInsert)
 router.put('/:id', auth.required, controllers.onUpdate)

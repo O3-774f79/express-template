@@ -21,6 +21,6 @@
   },
   "scripts": {
     "dev": "nodemon .",
-    "start": "NODE_ENV=production node ."
+    "start": "node ."
   }
 }
